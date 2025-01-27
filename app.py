@@ -5,11 +5,11 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-API_KEY = os.getenv("API_KEY")
+api_key = os.getenv("API_KEY")
 
 st.title("Neutron")
 
-model=ChatGoogleGenerativeAI(google_api_key=API_KEY,model="gemini-1.0-pro")
+model=ChatGoogleGenerativeAI(google_api_key=api_key,model="gemini-1.0-pro")
 st.markdown('''#### Hi! Let's get started.''')
 
 msgg=st.text_input("Type in your message for me")
