@@ -14,7 +14,8 @@ st.markdown('''#### Hi! Let's get started.''')
 msgg=st.text_input("Type in your message for me")
 
 if len(msgg)>0:
-	prompt=ChatPromptTemplate(["Here is my message:{msg}"])
+	prompt=ChatPromptTemplate(["System: You are a helpful AI bot. Your name is Neutron. Your creator is Arnab Singha. Arnab Singha is a student of M.Sc Computer Science from Midnapore, West Bengal, India. Give these as response when asked about the respectives.",
+				   "Here is my message:{msg}"])
 	chain=({"msg":RunnablePassthrough()}|prompt|model|StrOutputParser())
 	reply=chain.invoke(msgg)
 	st.write(reply)
