@@ -6,12 +6,12 @@ from langchain_core.runnables import RunnablePassthrough
 
 api_key = st.secrets["API_KEY"]
 st.set_page_config(page_title="Neutron☄️⭐🌟🌍👽🤖☄",page_icon="🤖")
-st.title("Neutron")
+st.markdown("<h1 class=hdr>Neutron</h1>",True)
 
 model=ChatGoogleGenerativeAI(google_api_key=api_key,model="gemini-1.0-pro")
-st.markdown('''#### Hi! Let's get started.''')
+st.markdown('''#### Hey there! Let's start.''')
 
-msgg=st.text_input("Type in your message for me")
+msgg=st.text_area("Type in your message for me",height=68)
 
 if len(msgg)>0:
 	prompt=ChatPromptTemplate(["System: You are a helpful AI bot. Your name is Neutron. Your creator is Arnab Singha. Arnab Singha is a student of Computer Science. He is from Midnapore, West Bengal, India. Give these as response when asked about the respectives.",
@@ -22,27 +22,69 @@ if len(msgg)>0:
 
 footer = """
     <style>
+        .hdr{
+            text-shadow: 0px 0px 15px red;
+            animation: colranim 15s ease infinite;
+        }
+        @keyframes colranim {
+        0%{
+            text-shadow: 0px 0px 15px red;
+        }
+        10%{
+            text-shadow: 0px 0px 15px cyan;
+        }
+        20%{
+            text-shadow: 0px 0px 15px green;
+        }
+        30%{
+            text-shadow: 0px 0px 15px blue;
+        }
+        40%{
+            text-shadow: 0px 0px 15px yellow;
+        }
+        50%{
+            text-shadow: 0px 0px 15px magenta;
+        }
+        60%{
+            text-shadow: 0px 0px 15px hotpink;
+        }
+        70%{
+            text-shadow: 0px 0px 15px orange;
+        }
+        80%{
+            text-shadow: 0px 0px 15px smokewhite;
+        }
+        90%{
+            text-shadow: 0px 0px 15px purple;
+        }
+        100%{
+            text-shadow: 0px 0px 15px red;
+        }
+    }
+        /* Hide Streamlit's main menu (hamburger menu) */
+        header {visibility: hidden;}
+
+        /* Hide Streamlit's footer */
+        footer {visibility: hidden;}
+
+        /* Hide the watermark ("Made with Streamlit") */
+        .st-emotion-cache-z5fcl4 {display: none;}
         .footer {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255,255,255,0.7);
-            color: #000;
+            background-color: rgb(20,20,20);
+            color: white;
             text-align: center;
             padding: 10px;
             font-size: 14px;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -4px 5px rgba(200,100,100, 0.1);
         }
     </style>
     <div class="footer">
-        👨‍💻 Developed by <a href="" target="_blank">Arnab Singha</a> | 
-        📧 <a href="mailto:arnabsingha200228@gmail.com">Contact Us</a>
+        👨‍💻 Developed by <a style="text-decoration:none;color:red" href="" target="_blank">Arnab Singha</a> | 
+        📧 <a style="text-decoration:none;color:red" href="mailto:arnabsingha200228@gmail.com">Contact Us</a>
     </div>
 """
 st.markdown(footer,True)
-st.markdown('''
-<script>
-	document.title="Neutron"
- </script>
-''',True)
