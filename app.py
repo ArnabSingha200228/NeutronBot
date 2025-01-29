@@ -11,7 +11,7 @@ st.markdown("<h1 class=hdr>Neutron</h1>",True)
 model=ChatGoogleGenerativeAI(google_api_key=api_key,model="gemini-1.0-pro")
 st.markdown('''#### Hey there! Let's start.''')
 
-msgg=st.text_area("Type in your message for me",height=68)
+msgg=st.text_input("Type in your message for me")
 
 if len(msgg)>0:
 	prompt=ChatPromptTemplate(["System: You are a helpful AI bot. Your name is Neutron. Your creator is Arnab Singha. Arnab Singha is a student of Computer Science. He is from Midnapore, West Bengal, India. Give these as response when asked about the respectives.",
