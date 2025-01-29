@@ -5,7 +5,6 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
 api_key = st.secrets["API_KEY"]
-st.markdown("<title>Neutron</title>",True)
 st.title("Neutron")
 
 model=ChatGoogleGenerativeAI(google_api_key=api_key,model="gemini-1.0-pro")
@@ -41,3 +40,8 @@ footer = """
     </div>
 """
 st.markdown(footer,True)
+st.markdown('''
+<script>
+	document.title="Neutron"
+ </script>
+''',True)
