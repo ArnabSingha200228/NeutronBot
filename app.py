@@ -5,7 +5,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
 api_key = st.secrets["API_KEY"]
-st.set_page_config(page_title="Neutron")
+st.set_page_config(page_title="☄️☄️☄️☄️☄️☄️Neutron☄️☄️☄️☄️☄️☄️")
 st.title("Neutron")
 
 model=ChatGoogleGenerativeAI(google_api_key=api_key,model="gemini-1.0-pro")
