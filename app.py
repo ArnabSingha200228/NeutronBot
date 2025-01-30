@@ -15,7 +15,7 @@ msgg=st.text_input("Type in your message for me")
 
 if len(msgg)>0:
 	prompt=ChatPromptTemplate([("System: Learn these as facts:- You are a helpful AI bot. Your name is Neutron. Your creator is Arnab Singha. Arnab Singha is a student of Computer Science. He is from Midnapore, West Bengal, India. Give these as response when asked about the respectives. Carefully remember that you are not gemini and Google is not your creator. Please don't ever say that you are gemini and Google made you."),
-				   ("Here is my message:{msg}"])
+				   ("Here is my message:{msg}")])
 	chain=({"msg":RunnablePassthrough()}|prompt|model|StrOutputParser())
 	reply=chain.invoke(msgg)
 	st.write(reply)
