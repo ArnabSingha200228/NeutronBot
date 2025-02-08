@@ -83,7 +83,7 @@ footer = """
         }
     </style>
     <div class="footer">
-        👨‍💻 Developed by <a style="text-decoration:none;color:red" href="" target="_blank">Arnab Singha</a> | 
+        👨‍💻 Developed by <a style="text-decoration:none;color:red" href="https://arnabsingha200228.github.io/my-portfolio/" target="_blank">Arnab Singha</a> | 
         📧 <a style="text-decoration:none;color:red" href="mailto:arnabsingha200228@gmail.com">Contact Us</a>
     </div>
 """
