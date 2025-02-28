@@ -8,7 +8,7 @@ api_key = st.secrets["API_KEY"]
 st.set_page_config(page_title="Neutron☄️⭐🌟🌍👽🤖☄",page_icon="🤖")
 st.markdown("<h1 class=hdr>Neutron</h1>",True)
 
-model=ChatGoogleGenerativeAI(google_api_key=api_key,model="gemini-1.0-pro")
+model=ChatGoogleGenerativeAI(google_api_key=api_key,model="gemini-1.5-pro")
 st.markdown('''#### Hey there! Let's start.''')
 
 msgg=st.text_input("Type in your message for me")
