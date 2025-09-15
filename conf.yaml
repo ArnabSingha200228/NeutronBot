@@ -1,0 +1,3 @@
+EMBEDDING_MODEL : "models/gemini-embedding-001"
+CHAT_MODEL : "gemini-2.5-flash"
+VECTOR_DB_PERSIS_DIR : "./chroma_db"

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+env/
+
+# Streamlit secrets
+.env
+
+# OS files
+.DS_Store
