@@ -6,6 +6,9 @@ __pycache__/
 # Virtual environments
 env/
 
+# chroma db
+chromadb/
+
 # Streamlit secrets
 .env
 
