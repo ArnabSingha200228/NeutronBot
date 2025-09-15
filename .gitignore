@@ -7,7 +7,7 @@ __pycache__/
 env/
 
 # chroma db
-chromadb/
+chroma_db/
 
 # Streamlit secrets
 .env
